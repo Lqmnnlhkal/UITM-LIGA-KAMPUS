@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results | Liga-Kampus</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="container topbar-inner">
+        <a class="brand" href="index.html">
+            <div class="logo">⚽</div>
+            <div>
+                LIGA-KAMPUS
+                <small>INTER-FACULTY TOURNAMENT MANAGER</small>
+            </div>
+        </a>
+
+        <nav class="nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<div class="app-shell">
+    <aside class="sidebar">
+        <h2>Liga-Kampus</h2>
+        <p>Storyboard Navigation</p>
+
+        <nav class="side-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="teams.html">Teams</a>
+            <a href="players.html">Players</a>
+            <a href="fixtures.html">Fixtures</a>
+            <a href="results.html" class="active">Results</a>
+            <a href="standings.html">Standings</a>
+            <a href="users.html">Users</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <div class="page-header">
+            <div>
+                <h1>Match Results</h1>
+                <p>CRUD mockup for entering match scores and scorers.</p>
+            </div>
+        </div>
+
+        <section class="card">
+            <h2>Submit Match Result</h2>
+            <br>
+
+            <form>
+                <div class="form-group">
+                    <label>Match <span class="required">*</span></label>
+                    <select required>
+                        <option value="">-- Select Match --</option>
+                        <option>Engineering FC vs Business United</option>
+                        <option>IT Warriors vs Arts Eagles</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Home Score <span class="required">*</span></label>
+                    <input type="number" required min="0" placeholder="2">
+                </div>
+
+                <div class="form-group">
+                    <label>Away Score <span class="required">*</span></label>
+                    <input type="number" required min="0" placeholder="1">
+                </div>
+
+                <div class="form-group">
+                    <label>Goal Scorers</label>
+                    <textarea rows="3" placeholder="Rafiq Hakimi, Daniel Wong"></textarea>
+                </div>
+
+                <button type="button" class="btn btn-green" onclick="mockSave('Result submitted successfully')">
+                    Submit Result
+                </button>
+            </form>
+
+            <br>
+
+            <h2>Result List</h2>
+
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>Match</th>
+                    <th>Score</th>
+                    <th>Scorers</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Engineering FC vs Business United</td>
+                    <td>2 - 2</td>
+                    <td>Rafiq Zamry, Daniel Wu</td>
+                    <td><span class="status active">Submitted</span></td>
+                    <td class="action-buttons">
+                        <button class="btn btn-blue">Edit</button>
+                        <button class="btn btn-red" onclick="mockDelete('result')">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>IT Warriors vs Arts Eagles</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td class="action-buttons">
+                        <button class="btn btn-blue">Enter Result</button>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

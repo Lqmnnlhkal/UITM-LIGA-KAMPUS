@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Management | Liga-Kampus</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="container topbar-inner">
+        <a class="brand" href="index.html">
+            <div class="logo">⚽</div>
+            <div>
+                LIGA-KAMPUS
+                <small>INTER-FACULTY TOURNAMENT MANAGER</small>
+            </div>
+        </a>
+
+        <nav class="nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<div class="app-shell">
+    <aside class="sidebar">
+        <h2>Liga-Kampus</h2>
+        <p>Storyboard Navigation</p>
+
+        <nav class="side-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="teams.html">Teams</a>
+            <a href="players.html" class="active">Players</a>
+            <a href="fixtures.html">Fixtures</a>
+            <a href="results.html">Results</a>
+            <a href="standings.html">Standings</a>
+            <a href="users.html">Users</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <div class="page-header">
+            <div>
+                <h1>Player Management</h1>
+                <p>CRUD mockup for registering and managing players.</p>
+            </div>
+        </div>
+
+        <section class="card">
+            <h2>Create / Update Player</h2>
+            <br>
+
+            <form>
+                <div class="form-group">
+                    <label>Player Name <span class="required">*</span></label>
+                    <input type="text" required placeholder="Rafiq Zamry">
+                </div>
+
+                <div class="form-group">
+                    <label>Team <span class="required">*</span></label>
+                    <select required>
+                        <option value="">-- Select Team --</option>
+                        <option>Engineering FC</option>
+                        <option>Business United</option>
+                        <option>IT Warriors</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Position <span class="required">*</span></label>
+                    <select required>
+                        <option value="">-- Select Position --</option>
+                        <option>Goalkeeper</option>
+                        <option>Defender</option>
+                        <option>Midfielder</option>
+                        <option>Forward</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Jersey Number <span class="required">*</span></label>
+                    <input type="number" required min="1" max="99" placeholder="9">
+                </div>
+
+                <button type="button" class="btn btn-green" onclick="mockSave('Player saved successfully')">
+                    Save Player
+                </button>
+            </form>
+
+            <br>
+
+            <h2>Player List</h2>
+
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>Player Name</th>
+                    <th>Team</th>
+                    <th>Position</th>
+                    <th>Jersey No.</th>
+                    <th>Actions</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Rafiq Zamry</td>
+                    <td>Engineering FC</td>
+                    <td>Forward</td>
+                    <td>9</td>
+                    <td class="action-buttons">
+                        <button class="btn btn-blue">Edit</button>
+                        <button class="btn btn-red" onclick="mockDelete('Rafiq Hakimi')">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Daniel Wu</td>
+                    <td>Business United</td>
+                    <td>Midfielder</td>
+                    <td>8</td>
+                    <td class="action-buttons">
+                        <button class="btn btn-blue">Edit</button>
+                        <button class="btn btn-red" onclick="mockDelete('Daniel Wong')">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

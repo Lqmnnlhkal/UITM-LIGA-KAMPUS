@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Liga-Kampus</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="container topbar-inner">
+        <a class="brand" href="index.html">
+            <div class="logo">⚽</div>
+            <div>
+                LIGA-KAMPUS
+                <small>INTER-FACULTY TOURNAMENT MANAGER</small>
+            </div>
+        </a>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="login.html" class="active">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </div>
+</header>
+
+<section class="auth-page">
+    <form class="auth-card" action="dashboard.html" method="get">
+        <h1>Login</h1>
+        <p>Enter your email and password to access the system.</p>
+
+        <div class="error-box">
+            error message: Invalid username or password.
+        </div>
+
+        <div class="form-group">
+            <label>Email <span class="required">*</span></label>
+            <input type="email" required placeholder="example@student.edu">
+        </div>
+
+        <div class="form-group">
+            <label>Password <span class="required">*</span></label>
+            <input type="password" required minlength="6" placeholder="Enter password">
+        </div>
+
+        <button type="submit" class="btn btn-blue" style="width:100%;">
+            Login
+        </button>
+
+        <br><br>
+
+        <p>
+            New user?
+            <a href="register.html" style="color:#0b3d91; font-weight:bold;">
+                Register here
+            </a>
+        </p>
+    </form>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>

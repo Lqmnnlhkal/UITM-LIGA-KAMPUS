@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixtures | Liga-Kampus</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="container topbar-inner">
+        <a class="brand" href="index.html">
+            <div class="logo">⚽</div>
+            <div>
+                LIGA-KAMPUS
+                <small>INTER-FACULTY TOURNAMENT MANAGER</small>
+            </div>
+        </a>
+
+        <nav class="nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<div class="app-shell">
+    <aside class="sidebar">
+        <h2>Liga-Kampus</h2>
+        <p>Storyboard Navigation</p>
+
+        <nav class="side-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="teams.html">Teams</a>
+            <a href="players.html">Players</a>
+            <a href="fixtures.html" class="active">Fixtures</a>
+            <a href="results.html">Results</a>
+            <a href="standings.html">Standings</a>
+            <a href="users.html">Users</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <div class="page-header">
+            <div>
+                <h1>Fixtures / Match Schedule</h1>
+                <p>CRUD mockup for managing match schedules.</p>
+            </div>
+        </div>
+
+        <section class="card">
+            <h2>Create / Update Fixture</h2>
+            <br>
+
+            <form>
+                <div class="form-group">
+                    <label>Home Team <span class="required">*</span></label>
+                    <select required>
+                        <option value="">-- Select Home Team --</option>
+                        <option>Engineering FC</option>
+                        <option>Business United</option>
+                        <option>IT Warriors</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Away Team <span class="required">*</span></label>
+                    <select required>
+                        <option value="">-- Select Away Team --</option>
+                        <option>Business United</option>
+                        <option>Arts Eagles</option>
+                        <option>Super Science</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Match Date <span class="required">*</span></label>
+                    <input type="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Match Time <span class="required">*</span></label>
+                    <input type="time" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Venue <span class="required">*</span></label>
+                    <input type="text" required placeholder="Pitch A">
+                </div>
+
+                <button type="button" class="btn btn-green" onclick="mockSave('Fixture saved successfully')">
+                    Save Fixture
+                </button>
+            </form>
+
+            <br>
+
+            <h2>Fixture List</h2>
+
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Home Team</th>
+                    <th>Away Team</th>
+                    <th>Venue</th>
+                    <th>Actions</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>2025-05-24</td>
+                    <td>10:00 AM</td>
+                    <td>Engineering FC</td>
+                    <td>Business United</td>
+                    <td>Pitch A</td>
+                    <td class="action-buttons">
+                        <button class="btn btn-blue">Edit</button>
+                        <button class="btn btn-red" onclick="mockDelete('fixture')">Delete</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>2025-05-24</td>
+                    <td>1:00 PM</td>
+                    <td>IT Warriors</td>
+                    <td>Arts Eagles</td>
+                    <td>Pitch B</td>
+                    <td class="action-buttons">
+                        <button class="btn btn-blue">Edit</button>
+                        <button class="btn btn-red" onclick="mockDelete('fixture')">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

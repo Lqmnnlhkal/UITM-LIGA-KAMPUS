@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Liga-Kampus</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="container topbar-inner">
+        <a class="brand" href="index.html">
+            <div class="logo">⚽</div>
+            <div>
+                LIGA-KAMPUS
+                <small>INTER-FACULTY TOURNAMENT MANAGER</small>
+            </div>
+        </a>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<div class="app-shell">
+    <aside class="sidebar">
+        <h2>Liga-Kampus</h2>
+        <p>Storyboard Navigation</p>
+
+        <nav class="side-nav">
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="teams.html">Teams</a>
+            <a href="players.html">Players</a>
+            <a href="fixtures.html">Fixtures</a>
+            <a href="results.html">Results</a>
+            <a href="standings.html">Standings</a>
+            <a href="users.html">Users</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <div class="page-header">
+            <div>
+                <h1>Dashboard</h1>
+                <p>Overview of tournament information.</p>
+            </div>
+        </div>
+
+        <section class="grid-4">
+            <div class="card stat">
+                <p>Total Teams</p>
+                <strong>12</strong>
+            </div>
+
+            <div class="card stat">
+                <p>Total Players</p>
+                <strong>156</strong>
+            </div>
+
+            <div class="card stat">
+                <p>Matches Played</p>
+                <strong>18</strong>
+            </div>
+
+            <div class="card stat">
+                <p>Goals Scored</p>
+                <strong>48</strong>
+            </div>
+        </section>
+
+        <section class="grid-2">
+            <div class="card">
+                <h2>League Standings Preview</h2>
+
+                <table>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Team</th>
+                        <th>Played</th>
+                        <th>Points</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Engineering FC</td>
+                        <td>6</td>
+                        <td>16</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Business United</td>
+                        <td>6</td>
+                        <td>13</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>Upcoming Matches</h2>
+
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Match</th>
+                        <th>Venue</th>
+                    </tr>
+
+                    <tr>
+                        <td>24 May</td>
+                        <td>Engineering vs Business</td>
+                        <td>Pitch A</td>
+                    </tr>
+
+                    <tr>
+                        <td>24 May</td>
+                        <td>IT vs Arts</td>
+                        <td>Pitch B</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
